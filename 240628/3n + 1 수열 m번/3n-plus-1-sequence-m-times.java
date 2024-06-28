@@ -14,7 +14,7 @@ public class Main {
                     n = n / 2;
                     cnt++;
                 }else{
-                    n = (3*n) + 1;
+                    n = 3 * n + 1;
                     cnt++;
                 }
                 
