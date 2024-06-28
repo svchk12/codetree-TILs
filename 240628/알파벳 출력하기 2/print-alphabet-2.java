@@ -11,6 +11,9 @@ public class Main {
                 }else{
                     System.out.print((char)x + " ");
                     x++;
+                    if(x >= 91){
+                    x = 65;
+                }
                 }
             }
             System.out.println();
