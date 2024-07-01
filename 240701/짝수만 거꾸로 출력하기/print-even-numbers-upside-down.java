@@ -10,8 +10,9 @@ public class Main {
         }
 
         for(int j = n - 1; j <=0 ; j++){
-            System.out.print(arr[j] + " ");
+            if(arr[j] % 2 == 0){
+                System.out.print(arr[j] + " ");
+            }
         }
-
     }
 }
