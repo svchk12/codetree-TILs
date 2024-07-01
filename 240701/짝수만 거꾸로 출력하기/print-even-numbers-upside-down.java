@@ -9,10 +9,8 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
-        for(int j = n-1; j <=0; j++){
-            if(arr[j] % 2 == 0){
-                System.out.print(arr[j] + " ");
-            }
+        for(int j = n; j >= 1; j--){
+            System.out.print(arr[j-1] + " ");
         }
 
     }
