@@ -8,7 +8,7 @@ public class Main {
         int b = sc.nextInt();
         int sum = 0;
         while(true){
-            if(a/b > 0){
+            if(a / b > 0){
                 cntArr[a%b]++;
                 a = a / b;
             }else{
