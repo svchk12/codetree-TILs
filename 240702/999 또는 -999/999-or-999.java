@@ -21,7 +21,9 @@ public class Main {
             
             if(arr[i] > max ){
                 max = arr[i];
-            }else if(arr[i] < min ){
+            }
+            
+            if(arr[i] < min ){
                 min = arr[i];
             }
         }
