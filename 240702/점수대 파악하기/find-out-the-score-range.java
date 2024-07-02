@@ -10,7 +10,7 @@ public class Main {
             if(arr[i]/10 >= 0){
                 if(arr[i] > 0){
                     cntArr[arr[i]/10-1] ++;
-                }else{
+                }else if(arr[i] >= 0){
                     break;
                 }
             }
