@@ -9,7 +9,7 @@ public class Main {
         int sum = 0;
 
         while(true){
-            if(a / b >= 1){
+            if(a / b > 1){
                 cntArr[a%b]++;
                 a = a / b;
             }else{
