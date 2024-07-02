@@ -20,8 +20,6 @@ public class Main {
         for(int i = 0; i < 10; i++){
             sum = sum + (cntArr[i] * cntArr[i]);
         }
-
         System.out.println(sum);
-
     }
 }
