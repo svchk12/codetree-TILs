@@ -14,7 +14,7 @@ public class Main {
         int min = arr[0];
         int max = arr[0];
 
-        for(int i = 1; i<arr.length; i++){
+        for(int i = 1; i<100; i++){
             if(arr[i] == 999 || arr[i] != -999){
                 break;
             }
