@@ -26,7 +26,7 @@ public class Main {
 
         for(int i = 0; i < 4; i++){
             System.out.print(cntArr[i] + " ");
-            if(cntArr[i]>=2){
+            if(cntArr[0]>=2){
                 situation = true;
             }
         }
