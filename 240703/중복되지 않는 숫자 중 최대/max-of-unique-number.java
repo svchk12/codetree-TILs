@@ -9,7 +9,7 @@ public class Main {
             arr[i] = sc.nextInt();
         }
 
-        int max = arr[0];
+        int max = -1;
         for(int i = 1; i < n; i++){
             if(arr[i] > max){
                 max = arr[i];
