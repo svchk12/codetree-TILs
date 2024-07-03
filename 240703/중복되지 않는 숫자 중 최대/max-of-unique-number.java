@@ -10,7 +10,7 @@ public class Main {
         }
 
         int max = -1;
-        for(int i = 1; i < n; i++){
+        for(int i = 0; i < n; i++){
             int curNum = arr[i];
             if(curNum > max){
                 int count = 0;
