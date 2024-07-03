@@ -15,7 +15,7 @@ public class Main {
             if(curNum > max){
                 int count = 0;
                 for(int j = 0; j < n; j++){
-                    if(arr[j] == arr[i]){
+                    if(arr[j] == curNum){
                         count++;
                     }
                 }
