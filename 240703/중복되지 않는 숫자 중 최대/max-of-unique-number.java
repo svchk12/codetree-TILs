@@ -11,8 +11,8 @@ public class Main {
 
         int max = -1;
         for(int i = 1; i < n; i++){
-            if(arr[i] > max){
-                max = arr[i];
+            int curNum = arr[i];
+            if(curNum > max){
                 int count = 0;
                 for(int j = 0; j < n; j++){
                     if(arr[j] == arr[i]){
@@ -20,7 +20,7 @@ public class Main {
                     }
                 }
                 if(count == 1){
-                    max = arr[i];
+                    max = curNum;
                 }
             }
 
