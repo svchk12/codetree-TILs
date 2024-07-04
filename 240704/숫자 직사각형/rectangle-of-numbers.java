@@ -7,10 +7,12 @@ public class Main {
         int m = sc.nextInt();
 
         int[][]arr = new int[n][m];
+        int cnt = 1;
 
         for(int i = 0; i < n; i++){
             for(int j = 0; j < m; j++){
-                arr[i][j] = sc.nextInt();
+                arr[i][j] = cnt;
+                cnt++;
             }
         }
 
