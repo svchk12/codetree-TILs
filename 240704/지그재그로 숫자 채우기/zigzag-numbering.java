@@ -6,19 +6,23 @@ public class Main {
         int m = sc.nextInt();
         
         int [][]arr = new int[n][m];
+        int num = 0;
+
+        for(int j = 0 ; j < m; j ++){
+            for(int i = 0; i < n; i++){
+               if(j % 2 == 0){
+                arr[i][j] = num++;
+               }else{
+                arr[n-i-1][j] = num++;
+               }
+            }
+        }
 
         for(int i = 0 ; i < n; i ++){
-            
             for(int j = 0; j < m; j++){
-                if(j == 0){
-                    arr[i][j] = i;
-                }
-                if(i == 0){
-                    if(j % 2 = 0){
-                        arr[i][j] = i + 9
-                    }
-                }
+               System.out.print(arr[i][j] + " ");
             }
+            System.out.println();
         }
         
     }
