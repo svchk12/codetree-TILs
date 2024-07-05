@@ -8,9 +8,14 @@ public class Main {
 
         int len = st.length();
 
-        for(int i = len-1; i > len - n-1; i--){
+        if(len < n){
+            for(int i = len; i >= 0; i--){
             System.out.print(st.charAt(i));
+            }    
+        }else{
+            for(int i = len-1; i > len - n-1; i--){
+            System.out.print(st.charAt(i));
+            }
         }
-        
     }
 }
