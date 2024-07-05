@@ -6,13 +6,11 @@ public class Main {
         String st = sc.next();
         int n = sc.nextInt();
 
-        for(int i = st.length()-1; i >= st.length() - n; i--){
-            if(st.length() - 1 >= st.length() - n){
-                System.out.print(st.charAt(i));
-            }else{
-                break;
-            }
-            
+        int len = st.length();
+
+        for(int i = len-1; i > len - n-1; i--){
+            System.out.print(st.charAt(i));
         }
+        
     }
 }
