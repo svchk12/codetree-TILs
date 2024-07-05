@@ -7,7 +7,7 @@ public class Main {
         int n = sc.nextInt();
 
         for(int i = st.length()-1; i >= st.length() - n; i--){
-            if(st.length - 1 > st.length - n){
+            if(st.length() - 1 > st.length() - n){
                 System.out.print(st.charAt(i));
             }else{
                 break;
