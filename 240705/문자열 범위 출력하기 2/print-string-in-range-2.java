@@ -9,7 +9,7 @@ public class Main {
         int len = st.length();
 
         if(len < n){
-            for(int i = len; i >= 0; i--){
+            for(int i = len-1; i >= 0; i--){
             System.out.print(st.charAt(i));
             }    
         }else{
