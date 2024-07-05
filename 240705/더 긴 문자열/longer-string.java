@@ -10,8 +10,12 @@ public class Main {
 
         if(sl1 > sl2){
             System.out.println(s1 + " " + sl1);
-        }else{
+        }
+        else if(sl1 < sl2){
             System.out.println(s2 + " " + sl2);
+        }
+        else{
+            System.out.println("same");
         }
     }
 }
