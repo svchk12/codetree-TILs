@@ -3,9 +3,15 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
-        String last = str.substring(str.length()-1, str.length());
-        String strRpl = str.substring(0,2) + str.substring(3);
-        strRpl = strRpl.substring(0, strRpl.length()-2) + last;
-        System.out.println(strRpl);
+        char[] arr = str.toCharArray();
+
+        arr[1] = ' ';
+        arr[arr.length-2] = ' ';
+
+        for(int i = 0; i < arr.length; i++){
+            if(arr[i] != ' '){
+                System.out.print(arr[i]);
+            }
+        }
     }
 }
