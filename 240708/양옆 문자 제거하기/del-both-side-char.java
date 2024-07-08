@@ -4,8 +4,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         String str = sc.next();
         String last = str.substring(str.length()-1, str.length());
-        str = str.substring(0,2) + str.substring(3);
-        str = str.substring(0,str.length()-2) + last;
-        System.out.println(str);
+        String strRpl = str.substring(0,2) + str.substring(3);
+        strRpl = strRpl.substring(0, strRpl.length()-2) + last;
+        System.out.println(strRpl);
     }
 }
