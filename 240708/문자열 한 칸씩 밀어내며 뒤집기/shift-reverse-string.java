@@ -22,9 +22,12 @@ public class Main {
 
             if(typ == 3){
                 char[] arr = str.toCharArray();
+                char[] tempArr = new char[arr.length];
                 for(int j = arr.length -1; j >= 0; j--){
                     System.out.print(arr[j]);
+                    tempArr[j] = arr[j];
                 }
+                str = String.valueOf(tempArr);
                 System.out.println();
             }
 
