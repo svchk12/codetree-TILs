@@ -5,7 +5,14 @@ public class Main {
         String st1 = sc.next();
         String st2 = sc.next();
         
-        System.out.println(st1.indexOf(st2));
+        int index = st1.indexOf(st2);
+        if(index > -1){
+            System.out.println(index);
+        }else{
+            System.out.println("No");
+        }
+
+        
         
     }
 }
