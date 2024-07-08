@@ -25,6 +25,7 @@ public class Main {
                 String b = sc.next();
                 String StrRpl = s.replace(a, b);
                 System.out.println(StrRpl);
+                s = StrRpl;
             }
         }
 
