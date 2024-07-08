@@ -1,37 +1,61 @@
 import java.util.Scanner;
+
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String str = sc.next();
-        int q = sc.nextInt();
         
-        for(int i = 0; i < q; i++){
-            int typ = sc.nextInt();
+        // 문자열을 입력받습니다.
+        String inputStr = sc.next();
+        int qNum = sc.nextInt();
 
-            if(typ == 1){
-                String first = str.substring(0,1);
-                str = str.substring(1, str.length()) + first;
-                System.out.println(str);
+        int strSize = inputStr.length();
+        
+        int qType;
+        for(int i = 0; i < qNum; i++) {
+            qType = sc.nextInt();
+            if(qType == 1) {
+                // step1: 가장 앞의 문자를 저장한 뒤,
+                // step2: 문자열을 앞부터 순회하며 문자를 한 칸씩 앞으로 당기고
+                // step3: 문자열의 제일 뒤에 가장 앞에 있던 문자를 넣어줍니다.
+                char[] arr = inputStr.toCharArray();
+
+                char front = arr[0];              // step1
+                for(int j = 1; j < strSize; j++) // step2
+                    arr[j - 1] = arr[j];
+                arr[strSize - 1] = front;        // step3
+
+                inputStr = new String(arr);
+                System.out.println(inputStr);
             }
+            else if(qType == 2) {
+                // step1: 가장 뒤의 문자를 저장한 뒤,
+                // step2: 문자열의 뒤부터 순회하며 문자를 한 칸씩 뒤로 밀어주고
+                // step3: 문자열의 제일 앞에 가장 뒤에 있던 문자를 넣어줍니다. 
+                char[] arr = inputStr.toCharArray();
 
-            if(typ == 2){
-                String last = str.substring(str.length() - 1,str.length());
-                str = last + str.substring(0, str.length()-1);
-                System.out.println(str);
+                char back = arr[strSize - 1];          // step1
+                for(int j = strSize - 1; j >= 1; j--)  // step2
+                    arr[j] = arr[j - 1];    
+                arr[0] = back;					        // step3
+
+                inputStr = new String(arr);
+                System.out.println(inputStr);
             }
+            else if(qType == 3) {
+                // 문자열의 앞부터 순회하며 좌우 대칭 위치에 있는 문자와 swap해줍니다. 
+                // 단, 문자열의 절반만 순회해줍니다.
+                char[] arr = inputStr.toCharArray();
 
-            if(typ == 3){
-                char[] arr = str.toCharArray();
-                char[] tempArr = new char[arr.length];
-                for(int j = arr.length -1; j >= 0; j--){
-                    System.out.print(arr[j]);
-                    tempArr[j] = arr[j];
+                char temp;
+                for(int j = 0; j < strSize / 2; j++) {
+                    temp = arr[j];
+                    arr[j] = arr[strSize - j - 1];
+                    arr[strSize - j - 1] = temp;
                 }
-                str = String.valueOf(tempArr);
-                System.out.println();
-            }
 
+                inputStr = new String(arr);
+                System.out.println(inputStr);
+            }
         }
-        
     }
 }
