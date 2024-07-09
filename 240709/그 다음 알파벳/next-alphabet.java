@@ -5,7 +5,7 @@ public class Main {
         String a = sc.next();
         char c = a.charAt(0);
         int next = (int)c + 1;
-        if(next == 122){
+        if(next == 123){
             next = 97;
         }
         System.out.print((char)next);
