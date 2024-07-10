@@ -17,7 +17,7 @@ public class Main {
                 break;
             }
 
-            if(i >= len){
+            if(n >= len){
                 n = -1;
                 break;
             }
