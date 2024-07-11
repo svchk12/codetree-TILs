@@ -3,9 +3,6 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        
-        
-
         UserInfo[] userInfo = new UserInfo[n];
         for(int i = 0; i < n; i++){
             String userNm = sc.next();
@@ -16,23 +13,8 @@ public class Main {
         }
 
         int descIdx = 0;        
-        for(int i = 0; i < n; i++){
-            char [] arrI = userInfo[i].userNm.toCharArray();
-            char [] arrDescIdx = userInfo[descIdx].userNm.toCharArray();
-            
-            int arrIsum = 0;
-            for(int j = 0; j < arrI.length;j++){
-                int num = Character.getNumericValue(arrI[j]);
-                arrIsum = arrIsum + num;
-            }
-
-            int arrDescIdxSum = 0;
-            for(int j = 0; j < arrDescIdx.length;j++){
-                int num = Character.getNumericValue(arrDescIdx[j]);
-                arrDescIdxSum = arrDescIdxSum + num;
-            }
-
-            if(arrIsum > arrDescIdxSum){
+        for(int i = 1; i < n; i++){
+            if(userInfo[i].userNm.compareTo(userInfo[descIdx].userNm) > 0){
                 descIdx = i;
             }
         }
