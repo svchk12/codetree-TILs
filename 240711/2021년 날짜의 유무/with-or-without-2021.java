@@ -24,10 +24,12 @@ public class Main {
             }
         }
 
-        else{
+        else if(m == 4 || m == 6 || m == 9 || m == 11){
             if(d > 30){
                 return false;
             }
+        }else{
+            return false;
         }
         return true;
     }
