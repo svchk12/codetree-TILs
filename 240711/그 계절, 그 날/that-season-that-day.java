@@ -44,9 +44,7 @@ public class Main {
                 }
             }
             else if(m == 4 || m == 6 || m == 9 || m == 11){
-                if(d <= 30){
-                    m = m;
-                }else{
+                if(d > 31){
                     m = -1;
                 }
             }           
@@ -69,9 +67,7 @@ public class Main {
                 }
             }
             else if(m == 4 || m == 6 || m == 9 || m == 11){
-                if(d <= 30){
-                    m = m;
-                }else{
+                if(d > 30){
                     m = -1;
                 }
             }  
