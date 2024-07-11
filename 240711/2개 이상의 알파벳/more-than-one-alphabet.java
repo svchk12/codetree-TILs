@@ -9,8 +9,9 @@ public class Main {
     public static void car(String str){
         char[] arr = str.toCharArray();
         int cnt = 0;
-        for(int i = 0; i < arr.length-1; i++){
-            if(arr[i] != arr[i+1]){
+        char compare = arr[0];
+        for(int i = 1; i < arr.length; i++){
+            if(arr[i-1] != arr[i]){
                 cnt++;
             }
         }
