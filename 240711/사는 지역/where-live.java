@@ -17,7 +17,22 @@ public class Main {
 
         int descIdx = 0;        
         for(int i = 0; i < n; i++){
-            if(userInfo[i].userNm.charAt(0) > userInfo[descIdx].userNm.charAt(0)){
+            char [] arrI = userInfo[i].userNm.toCharArray();
+            char [] arrDescIdx = userInfo[descIdx].userNm.toCharArray();
+            
+            int arrIsum = 0;
+            for(int j = 0; j < arrI.length;j++){
+                int num = Character.getNumericValue(arrI[j]);
+                arrIsum = arrIsum + num;
+            }
+
+            int arrDescIdxSum = 0;
+            for(int j = 0; j < arrDescIdx.length;j++){
+                int num = Character.getNumericValue(arrDescIdx[j]);
+                arrDescIdxSum = arrDescIdxSum + num;
+            }
+
+            if(arrIsum > arrDescIdxSum){
                 descIdx = i;
             }
         }
