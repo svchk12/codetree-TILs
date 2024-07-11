@@ -9,18 +9,23 @@ public class Main {
 
         if(o.equals("+")){
             result = sum(a,c);
+            System.out.println(a + " " + o + " " + c + " = " + result);
         }
         else if(o.equals("-")){
             result = minus(a,c);
+            System.out.println(a + " " + o + " " + c + " = " + result);
         }
         else if(o.equals("*")){
             result = multiple(a,c);
+            System.out.println(a + " " + o + " " + c + " = " + result);
         }
         else if(o.equals("/")){
             result = divide(a,c);
+            System.out.println(a + " " + o + " " + c + " = " + result);
         }
-
-        System.out.println(a + " " + o + " " + c + " = " + result);
+        else{
+            System.out.println("False");
+        }
     }
 
     public static int sum(int a, int c){
