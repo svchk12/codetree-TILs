@@ -14,11 +14,11 @@ public class Main {
         if(n % 2 == 0){
             String nStr = Integer.toString(n);
             char[] arr = nStr.toCharArray();
-            if(arr[0] + arr[1] % 5 == 0){
+            if((Character.getNumericValue(arr[0]) + Character.getNumericValue(arr[1])) % 5 == 0){
                 return true;
+            }else{
+                return false;
             }
-        }else{
-            return false;
         }
         return true;
     }
