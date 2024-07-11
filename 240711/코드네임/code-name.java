@@ -10,8 +10,9 @@ public class Main {
         }
 
         int minIdx = 0;
+        int min = scoreBoard[0].score
         for(int i = 0; i < 5; i++){
-            if(scoreBoard[i].score < minIdx){
+            if(scoreBoard[i].score < min){
                 minIdx = i;
             }
         }
