@@ -14,6 +14,7 @@ public class Main {
         for(int i = 0; i < 5; i++){
             if(scoreBoard[i].score < min){
                 minIdx = i;
+                min = scoreBoard[i].score;
             }
         }
         System.out.println(scoreBoard[minIdx].codeNm + " " + scoreBoard[minIdx].score);
