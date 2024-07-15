@@ -1,6 +1,5 @@
 import java.util.Scanner;
 public class Main {
-    static int cnt = 0;
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
@@ -9,15 +8,14 @@ public class Main {
 
     public static int cal(int n){
         if(n == 1){
-            return cnt;
+            return 0;
         }
 
         if(n % 2 !=0){
-            cnt++;
-            return cal(3*n+1) ;
+            return cal(3*n+1) + 1 ;
         }else{
-            cnt++;
-            return cal(n/2);
+            
+            return cal(n/2) + 1;
         }
     }
 }
