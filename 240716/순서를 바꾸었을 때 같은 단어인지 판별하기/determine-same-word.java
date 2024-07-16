@@ -15,7 +15,7 @@ public class Main {
         Arrays.sort(arr1);
         Arrays.sort(arr2);
         if(arr1.length != arr2.length){
-            flag = false
+            flag = false;
         }
         else if(arr1.length == arr2.length){
             for(int i = 0; i < arr2.length; i++){
