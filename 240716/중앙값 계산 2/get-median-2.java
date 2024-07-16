@@ -10,16 +10,14 @@ public class Main {
         for(int i = 0; i < n; i++){
             arr[i] = sc.nextInt();
         }
-
         
-        
-        for(int i = 0; i < n; i++){
+        for(int i = 0; i <= n; i++){
             if(i == 0){
-                System.out.print(arr[i] + " ");
+                //System.out.print(arr[i] + " ");
             }else{
-                Arrays.sort(arr);
                 if(i % 2 != 0){
-                    System.out.print(arr[i/2+1] + " ");
+                    Arrays.sort(arr, 0, i);
+                    System.out.print(arr[i/2] + " ");
                 }
             }
         }
