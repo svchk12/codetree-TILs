@@ -20,7 +20,7 @@ public class Main {
         Arrays.sort(arr);
         for(int i = 0; i < n; i++){
             if(!arr[i].equals("")){
-                System.out.println(arr[i+k]);
+                System.out.println(arr[i+k-1]);
                 break;
             }
         }
