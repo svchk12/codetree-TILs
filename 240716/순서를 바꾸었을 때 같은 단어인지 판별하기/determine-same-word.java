@@ -15,16 +15,16 @@ public class Main {
         Arrays.sort(arr1);
         Arrays.sort(arr2);
 
-        if(arr1.length > arr2.length){
+        if(arr1.length >= arr2.length){
             for(int i = 0; i < arr1.length; i++){
                 if(arr1[i] != arr2[i]){
                     flag = false;
                     break;
                 }
             }
-        }else{
+        }else if(arr1.length <= arr2.length){
             for(int i = 0; i < arr2.length; i++){
-                if(arr1[i] != arr2[i]){
+                if(arr2[i] != arr1[i]){
                     flag = false;
                     break;
                 }
