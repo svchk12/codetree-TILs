@@ -25,7 +25,7 @@ public class Main {
                 cnt++;
             }
             else{
-                System.out.println(arr[i+cnt+1]);
+                System.out.println(arr[i+cnt-1]);
                 break;
             }
         }
