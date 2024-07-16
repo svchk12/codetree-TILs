@@ -20,11 +20,12 @@ public class Main {
         }
         Arrays.sort(arr);
         for(int i = 0; i < n; i++){
+            //System.out.println(arr[i]);
             if(arr[i].equals("")){
                 cnt++;
             }
             else{
-                System.out.println(arr[i+k-1]);
+                System.out.println(arr[i+k]);
                 break;
             }
         }
