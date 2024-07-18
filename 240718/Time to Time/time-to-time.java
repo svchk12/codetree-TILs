@@ -8,19 +8,7 @@ public class Main {
         int b = sc.nextInt();
         int c = sc.nextInt();
         int d = sc.nextInt();
-        int duration = 0;
-
-        while(true){
-            if(a == c && b == d){
-                break;
-            }
-            duration++;
-            b++;
-            if(b == 60){
-                a++;
-                b = 0;
-            }
-        }
-        System.out.print(duration);
+        
+        System.out.print((c * 60 + d) - (a * 60 + b));
     }
 }
