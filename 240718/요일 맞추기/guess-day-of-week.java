@@ -13,10 +13,11 @@ public class Main {
 
         int date1 = totalDays(m1,d1);
         int date2 = totalDays(m2,d2);
-        int diff = date2 - date1 + 1;
+        int diff = date2 - date1;
 
         if(diff < 0){
-            System.out.println(name_of_days[diff % 7]);
+            diff = 0 - diff;
+            System.out.println(name_of_days[diff % 7 -1]);
         }else if(diff == 0){
             System.out.println(name_of_days[1]);
         }else if(diff > 0){
