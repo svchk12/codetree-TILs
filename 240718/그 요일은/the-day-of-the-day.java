@@ -15,12 +15,7 @@ public class Main {
         int date1 = totalDays(m1,d1);
         int date2 = totalDays(m2,d2);
         int diff = date2 - date1;
-        //int dateIdx = diff % 7;
-
-        //if(dateIdx =)
-        System.out.println(diff % 7);
-        //System.out.println(name_of_days[diff % 7]);
-        
+        System.out.println(diff / 7 + 1);
         
     }
 
