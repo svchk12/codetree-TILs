@@ -32,7 +32,7 @@ public class Main {
         int totalMin1 = (date1 - 1) * 1440 + (60 * 11) + 11;
         int totalMin2 = (date2 - 1) * 1440 + (60 * b) + c;
 
-        if(totalMin2 - totalMin1 > 0){
+        if(totalMin2 - totalMin1 >= 0){
             System.out.print(totalMin2 - totalMin1);
         }else{
             System.out.print("-1");
