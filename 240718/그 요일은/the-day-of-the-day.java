@@ -14,9 +14,18 @@ public class Main {
 
         int date1 = totalDays(m1,d1);
         int date2 = totalDays(m2,d2);
-        int diff = date2 - date1;
-        System.out.println(diff / 7 + 1);
+        int diff = date2 - date1 + 1;
         
+        int body = diff / 7;
+        int rest = diff % 7;
+
+        for(int i = 0; i < rest; i++){
+            if(name_of_days[i].equals(A)){
+                body++;
+            }
+        }
+
+        System.out.println(body);
     }
 
     public static int totalDays(int m, int d){
