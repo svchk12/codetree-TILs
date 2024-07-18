@@ -31,7 +31,7 @@ public class Main {
             }
         }
 
-        int diff = date2 - date1;
+        int diff = date2 - date1 + 1;
         if(diff < 0){
             diff = 0 - diff;
         }
@@ -39,7 +39,7 @@ public class Main {
         if(diff == 0){
             System.out.println(name_of_days[1]);
         }else{
-            System.out.println(name_of_days[diff % 7 - 1]);
+            System.out.println(name_of_days[diff % 7]);
         }
         
     }
