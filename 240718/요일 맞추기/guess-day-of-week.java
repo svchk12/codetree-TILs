@@ -17,7 +17,7 @@ public class Main {
 
         if(diff < 0){
             diff = 0 - diff;
-            System.out.println(name_of_days[diff % 7]);
+            System.out.println(name_of_days[7 - diff % 7]);
         }else if(diff == 0){
             System.out.println(name_of_days[0]);
         }else if(diff > 0){
