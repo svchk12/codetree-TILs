@@ -13,17 +13,9 @@ public class Main {
 
         int date1 = totalDays(m1,d1);
         int date2 = totalDays(m2,d2);
-        int diff = 0;
-        
-        if(date1 > date2){
-            diff = date1 - date2 + 1;
-            System.out.println(name_of_days[diff % 7]);
-        }else{
-            diff = date2 - date1 + 1;
-            System.out.println(name_of_days[diff % 7]);
-        }
+        int diff = date2 - date1 + 1;
 
-        
+        System.out.println(name_of_days[diff % 7]);
         
         
     }
