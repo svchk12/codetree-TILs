@@ -18,7 +18,7 @@ public class Main {
         int maxEnd = sections.stream().mapToInt(Section::end).max().getAsInt();
 
         int answer = -1;
-        for (int value = minStart; value < maxEnd; value++) {
+        for (int value = minStart; value <= maxEnd; value++) {
             int count = 0;
             for (Section section : sections) {
                 if (section.isContain(value)) {
@@ -45,7 +45,7 @@ class Section {
     }
 
     boolean isContain(int value) {
-        return start < value && value < end;
+        return start <= value && value < end;
     }
 
     int start() {
