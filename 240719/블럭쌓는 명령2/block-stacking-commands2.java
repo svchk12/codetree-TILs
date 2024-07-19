@@ -12,7 +12,7 @@ public class Main {
         for(int i = 0; i < k; i++){
             int start = sc.nextInt();
             int end = sc.nextInt();
-            for(int j = start; j <= end; j++){
+            for(int j = start; j < end; j++){
                 arr[j] = arr[j] + 1;
             }
         }
