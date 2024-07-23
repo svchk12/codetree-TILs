@@ -15,17 +15,12 @@ public class Main {
             if(command.equals("R")){
                 for(int j = 0; j < x; j++){
                     arr[start]++;
-                    if(j < x){
-                        start++;
-                    }
-                    
+                    start++;
                 }
             }else{
                 for(int j = 0; j < x; j++){
                     arr[start]++;
-                    if(j < x){
-                        start--;
-                    }
+                    start--;
                 }
             }
         }
