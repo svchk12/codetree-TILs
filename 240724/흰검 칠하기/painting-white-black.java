@@ -18,7 +18,6 @@ public class Main {
 
             if(command.equals("R")){
                 for(int j = 0; j < x; j++){
-                    //colorVo[start] = new ColorVo("Black", 0, 1);
                     colorVo[start].blackUp();
                     if(j < x -1){
                         start++;
@@ -26,7 +25,6 @@ public class Main {
                 }
             }else{
                 for(int j = 0; j < x; j++){
-                    //colorVo[start] = new ColorVo("White", 1, 0);
                     colorVo[start].whiteUp();
                     if(j < x -1){
                         start--;
@@ -50,14 +48,6 @@ public class Main {
                 blackCount++;
             }
         }
-        // System.out.println(colorVo[99999].whiteCount + " " + colorVo[99999].blackCount + " " + colorVo[99999].status);
-        // System.out.println(colorVo[100000].whiteCount + " " + colorVo[100000].blackCount + " " + colorVo[100000].status);
-        // System.out.println(colorVo[100001].whiteCount + " " + colorVo[100001].blackCount + " " + colorVo[100001].status);
-        // System.out.println(colorVo[100002].whiteCount + " " + colorVo[100002].blackCount + " " + colorVo[100002].status);
-        // System.out.println(colorVo[100003].whiteCount + " " + colorVo[100003].blackCount + " " + colorVo[100003].status);
-        // System.out.println(colorVo[100004].whiteCount + " " + colorVo[100004].blackCount + " " + colorVo[100004].status);
-        // System.out.println(colorVo[100005].whiteCount + " " + colorVo[100005].blackCount + " " + colorVo[100005].status);
-        // System.out.println(colorVo[100006].whiteCount + " " + colorVo[100006].blackCount + " " + colorVo[100006].status);
          System.out.print(whiteCount + " " + blackCount + " " + grayCount);
     }
 }
@@ -89,16 +79,4 @@ class ColorVo{
         }
     }
 
-
-    // public ColorVo(String status, int whiteCount, int blackCount){
-    //     if(this.whiteCount + whiteCount >=2 && this.blackCount >=2){
-    //         this.status = "Gray";
-    //     }else if(this.whiteCount >=2 && this.blackCount + blackCount >=2)
-    //         this.status = "Gray";
-    //     else{
-    //         this.status = status;
-    //     }
-    //     this.whiteCount = this.whiteCount++;
-    //     this.blackCount = this.blackCount++;
-    // }
 }
