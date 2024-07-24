@@ -14,23 +14,15 @@ public class Main {
           int x2 = sc.nextInt();
           int y2 = sc.nextInt();
 
-          if(x1 < 0){
-            x1 = x1 + 100;
-          }
-          if(y1 < 0){
-            y1 = y1 + 100;
-          }
-          if(x2 < 0){
-            x2 = x2 + 100;
-          }
-          if(y2 < 0){
-            y2 = y2 + 100;
-          }
+          x1 = x1 + 100;
+          y1 = y1 + 100;
+          x2 = x2 + 100;
+          y2 = y2 + 100;
 
           for(int j = x1; j < x2; j++){
             for(int k = y1; k< y2; k++){
                 if(arr[j][k] == 0){
-                    arr[j][k]++;
+                    arr[j][k]= 1;
                 }
             }
           }
