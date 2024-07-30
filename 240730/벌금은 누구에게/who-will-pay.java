@@ -14,12 +14,11 @@ public class Main {
             students[stNo]++;
         }
 
-        for(int i = 0; i < students.length; i++){
-            
-            //if(students[i] == k){
-                System.out.println(students[30]);
+        for(int i = 1; i < students.length; i++){
+            if(students[i] == k){
+                System.out.println(i);
                 return;
-            //}
+            }
         }
         System.out.println("-1");
 
