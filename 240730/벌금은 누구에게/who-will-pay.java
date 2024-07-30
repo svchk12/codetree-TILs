@@ -12,15 +12,11 @@ public class Main {
         for(int i = 0; i < m; i++){
             int stNo = sc.nextInt();
             students[stNo]++;
-        }
-
-        for(int i = 1; i < students.length; i++){
-            if(students[i] == k){
+            if(students[stNo] == k){
                 System.out.println(i);
                 return;
             }
         }
         System.out.println("-1");
-
     }
 }
