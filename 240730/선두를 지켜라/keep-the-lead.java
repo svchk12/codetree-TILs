@@ -11,26 +11,24 @@ public class Main {
         int [] arr2 = new int[1000000];
 
 
-        int point = 0;
-        int idx = 0;
+        int idx = 1;
         for(int i = 0; i < N; i++){
             int v = sc.nextInt();
             int t = sc.nextInt();
             for(int j = 0; j< t; j++){
-                point = v * 1;
-                arr1[++idx] = point; 
+                arr1[idx] = arr1[idx - 1] + v; 
+                idx++;
             }
             
         }
 
-        point = 0;
-        idx = 0;
+        idx = 1;
         for(int i = 0; i < M; i++){
             int v = sc.nextInt();
             int t = sc.nextInt();
             for(int j = 0; j< t; j++){
-                point = v * 1;
-                arr2[++idx] = point; 
+                arr2[idx] = arr2[idx - 1] + v; 
+                idx++;
             }
         }
 
