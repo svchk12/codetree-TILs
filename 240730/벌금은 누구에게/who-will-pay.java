@@ -15,10 +15,11 @@ public class Main {
         }
 
         for(int i = 0; i < students.length; i++){
-            if(students[i] == k){
-                System.out.println(i);
+            
+            //if(students[i] == k){
+                System.out.println(students[30]);
                 return;
-            }
+            //}
         }
         System.out.println("-1");
 
