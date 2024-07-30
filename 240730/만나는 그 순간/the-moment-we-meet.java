@@ -46,11 +46,15 @@ public class Main {
             sum = sum + t;
         }
 
+        
         for(int i = 0; i < 1000000; i++){
             if(arr1[i] == arr2[i]){
                 System.out.println(i+1);
-                break;
+                System.exit(0);
             }
         }
+
+        System.out.println("-1");
+
     }
 }
