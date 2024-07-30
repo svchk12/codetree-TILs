@@ -15,7 +15,6 @@ public class Main {
         }
 
         for(int i = 1; i < students.length; i++){
-            System.out.println(students[i]);
             if(students[i] == k){
                 System.out.println(i);
                 return;
