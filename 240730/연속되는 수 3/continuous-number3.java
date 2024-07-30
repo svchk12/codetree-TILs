@@ -28,6 +28,15 @@ public class Main {
                 curInx++;               
             }
         }
+
+        if(countArr[0] == 0){
+            if(pluseCnt > 0){
+                countArr[0] = pluseCnt;
+            }else if(minusCnt > 0){
+                countArr[0] = minusCnt;
+            }
+        }
+
         int max = Arrays.stream(countArr).max().getAsInt();
         System.out.println(max);
     }
