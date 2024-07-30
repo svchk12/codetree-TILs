@@ -9,13 +9,13 @@ public class Main {
         int k = sc.nextInt();
 
         int[] students = new int[n+1];
-        
         for(int i = 0; i < m; i++){
             int stNo = sc.nextInt();
             students[stNo]++;
         }
 
-        for(int i = 0; i < m; i++){
+        for(int i = 1; i < students.length; i++){
+            System.out.println(students[i]);
             if(students[i] == k){
                 System.out.println(i);
                 return;
