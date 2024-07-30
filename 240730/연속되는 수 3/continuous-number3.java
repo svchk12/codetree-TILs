@@ -12,38 +12,17 @@ public class Main {
             numbers[i] = sc.nextInt();
         }
 
-        int [] countArr = new int[n];
-        int curInx = 0;
-        int pluseCnt = 0;
-        int minusCnt = 0;
-        boolean isPluse = true;
-        for(int i = 0; i < numbers.length; i++){
-            if(numbers[i] > 0){
-                pluseCnt++;
-                if(minusCnt > 0){
-                    countArr[curInx] = minusCnt;
-                    curInx++;
-                }
+        int max = 0;
+        int answer = 0;
+        for(int i = 0 ; i < N ; i++) {
+            if(i >= 1 && (arr[i] * arr[i - 1] > 0)) { // 부호가 같은 경우
+                max++;
             }
-            
-            if(numbers[i] < 0){
-                minusCnt++;
-                if(pluseCnt > 0){
-                    countArr[curInx] = pluseCnt;
-                    curInx++;
-                }
+            else {  // 부호가 다른 경우
+                max = 1;
             }
+            answer = Math.max(answer, max);    // 최장 길이 갱신
         }
-
-        if(countArr[0] == 0){
-            if(pluseCnt > 0){
-                countArr[0] = pluseCnt;
-            }else if(minusCnt > 0){
-                countArr[0] = minusCnt;
-            }
-        }
-
-        int max = Arrays.stream(countArr).max().getAsInt();
         System.out.println(max);
     }
 }
