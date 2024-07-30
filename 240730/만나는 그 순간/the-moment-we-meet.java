@@ -11,46 +11,44 @@ public class Main {
         int [] arr2 = new int[1000000];
         int point = 0;
         int sum = 0;
-
+        int idx = 0;
         for(int i = 0; i < n; i++){
             String d = sc.next();
             int t = sc.nextInt();
-            for(int j = sum; j < sum + t; j++){
+            for(int j = 0; j < t; j++){
                 if(d.equals("R")){
-                    point = point + 1;
-                    arr1[j] = point;
-                    
-                }else{
-                    point = point -1 ;
-                    arr1[j] = point;
+                    point++;
+                    arr1[++idx] = point;
+                }else if(d.equals("L")){
+                    point--;
+                    arr1[++idx] = point;
                 }
             }
-            sum = sum + t;
         }
 
         point = 0;
         sum = 0;
+        idx = 0;
         for(int i = 0; i < m; i++){
             String d = sc.next();
             int t = sc.nextInt();
-            for(int j = sum; j < sum + t; j++){
+            for(int j = 0; j < t; j++){
                 if(d.equals("R")){
-                    point = point + 1;
-                    arr2[j] = point;
+                    point++;
+                    arr2[++idx] = point;
                     
-                }else{
-                    point = point -1 ;
-                    arr2[j] = point;
+                }else if(d.equals("L")){
+                    point--;
+                    arr2[++idx] = point;
                 }
             }
-            sum = sum + t;
         }
 
         
-        for(int i = 0; i < 1000000; i++){
+        for(int i = 1; i <= idx; i++){
             if(arr1[i] == arr2[i]){
-                System.out.println(i+1);
-                System.exit(0);
+                System.out.println(i);
+                return;
             }
         }
 
