@@ -20,22 +20,28 @@ public class Main {
         for(int i = 0; i < numbers.length; i++){
             if(numbers[i] > 0){
                 pluseCnt++;
-                countArr[curInx] = minusCnt;
-                curInx++;               
-            }else if(numbers[i] < 0){
+                if(minusCnt > 0){
+                    countArr[curInx] = minusCnt;
+                    curInx++;
+                }
+            }
+            
+            if(numbers[i] < 0){
                 minusCnt++;
-                countArr[curInx] = pluseCnt;
-                curInx++;               
+                if(pluseCnt > 0){
+                    countArr[curInx] = pluseCnt;
+                    curInx++;
+                }
             }
         }
 
-        if(countArr[0] == 0){
-            if(pluseCnt > 0){
-                countArr[0] = pluseCnt;
-            }else if(minusCnt > 0){
-                countArr[0] = minusCnt;
-            }
-        }
+        // if(countArr[0] == 0){
+        //     if(pluseCnt > 0){
+        //         countArr[0] = pluseCnt;
+        //     }else if(minusCnt > 0){
+        //         countArr[0] = minusCnt;
+        //     }
+        // }
 
         int max = Arrays.stream(countArr).max().getAsInt();
         System.out.println(max);
