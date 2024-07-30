@@ -20,7 +20,7 @@ public class Main {
                 max++;
             }
             else {
-                max = numbers[i] > t ? 1 : 0;
+                max = 0;
             }
             answer = Math.max(answer, max);
         }
