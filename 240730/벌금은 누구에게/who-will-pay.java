@@ -13,7 +13,7 @@ public class Main {
             int stNo = sc.nextInt();
             students[stNo]++;
             if(students[stNo] == k){
-                System.out.println(i);
+                System.out.println(stNo);
                 return;
             }
         }
