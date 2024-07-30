@@ -18,7 +18,7 @@ public class Main {
             System.out.println(students[i]);
             if(students[i] >= k){
                 System.out.println(i);
-                return;
+                break;
             }
         }
         System.out.println("-1");
