@@ -41,6 +41,7 @@ public class Main {
                 cnt++;
             }
             if(cnt == K){
+                System.out.println(cnt);
                 break;
             }
         }
