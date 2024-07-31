@@ -14,7 +14,7 @@ public class Main {
         for(int i = 0; i < n; i++){
             int t = sc.nextInt();
             String d = sc.next();
-            for(int j = 0; j < t + 1; j++){
+            for(int j = 0; j < t; j++){
                 if(d.equals("R")){
                     point++;
                     arr1[idx++] = point;
@@ -30,7 +30,7 @@ public class Main {
         for(int i = 0; i < n; i++){
             int t = sc.nextInt();
             String d = sc.next();
-            for(int j = 0; j < t + 1; j++){
+            for(int j = 0; j < t; j++){
                 if(d.equals("R")){
                     point++;
                     arr2[idx++] = point;
