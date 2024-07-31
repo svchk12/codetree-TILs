@@ -10,7 +10,6 @@ public class Main {
         int T = sc.nextInt();
 
         int[] isP = new int [N+1];
-
         Situation[] situation = new Situation[251];
 
         for(int i = 0; i < 251; i++){
