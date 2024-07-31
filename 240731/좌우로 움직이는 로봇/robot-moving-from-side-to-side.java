@@ -25,9 +25,13 @@ public class Main {
             }
         }
 
+        for(int i = idx; i < 2000001; i ++){
+            arr1[i] = point;
+        }
+
         idx = 0;
         point = 1000000;
-        for(int i = 0; i < n; i++){
+        for(int i = 0; i < m; i++){
             int t = sc.nextInt();
             String d = sc.next();
             for(int j = 0; j < t; j++){
@@ -40,6 +44,11 @@ public class Main {
                 }
             }
         }
+
+        for(int i = idx; i < 2000001; i ++){
+            arr2[i] = point;
+        }
+
         int cnt = 0;
         for(int i = 1; i <= idx; i++){
             if(arr1[i-1] != arr2[i-1] && arr1[i] == arr2[i]){
