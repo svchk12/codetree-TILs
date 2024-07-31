@@ -34,7 +34,7 @@ public class Main {
                     isP[situation[i].x] = 1;
                     isP[situation[i].y] = 1;
                 }
-                if(isP[situation[i].x] == P || isP[situation[i].y]== P){
+                if(isP[situation[i].x] == 1 || isP[situation[i].y]== 1){
                     isP[situation[i].x] = 1;
                     isP[situation[i].y] = 1;
                 }
