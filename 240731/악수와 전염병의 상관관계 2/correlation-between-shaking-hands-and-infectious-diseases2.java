@@ -4,10 +4,10 @@ import java.util.Collections;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int N = sc.nextInt();//4
-        int K = sc.nextInt();//2
-        int P = sc.nextInt();//2
-        int T = sc.nextInt();//3
+        int N = sc.nextInt();
+        int K = sc.nextInt();
+        int P = sc.nextInt();
+        int T = sc.nextInt();
 
         int[] isP = new int [N+1];
 
@@ -32,8 +32,12 @@ public class Main {
         for(int i = 0; i < 251; i++){
             if(situation[i].x > 0){
                 if(situation[i].x == P || situation[i].y ==P){
-                isP[situation[i].x] = 1;
-                isP[situation[i].y] = 1;
+                    isP[situation[i].x] = 1;
+                    isP[situation[i].y] = 1;
+                }
+                if(isP[situation[i].x] == 1 || isP[situation[i].y]== P){
+                    isP[situation[i].x] = 1;
+                    isP[situation[i].y] = 1;
                 }
                 cnt++;
             }
