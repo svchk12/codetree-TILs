@@ -34,7 +34,6 @@ public class Main {
                 if(situation[i].x == P || situation[i].y ==P){
                     isP[situation[i].x] = 1;
                     isP[situation[i].y] = 1;
-                    continue;
                 }
                 
                 //앞서서 감염됬는지 체크
