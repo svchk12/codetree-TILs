@@ -31,10 +31,10 @@ public class Main {
         for(int i = 0; i < 251; i++){
             if(situation[i].x > 0){
                 // 최초 감염자인지 체크
-                if(situation[i].x == P || situation[i].y ==P){
-                    isP[situation[i].x] = 1;
-                    isP[situation[i].y] = 1;
-                }
+                // if(situation[i].x == P || situation[i].y ==P){
+                //     isP[situation[i].x] = 1;
+                //     isP[situation[i].y] = 1;
+                // }
                 
                 //앞서서 감염됬는지 체크
                 for(int j = 0; j <= i; j ++){
@@ -42,7 +42,6 @@ public class Main {
                         isP[situation[j].x] = 1;
                         isP[situation[j].y] = 1;
                     }
-                    continue;
                 }
                 cnt++;
             }
@@ -71,3 +70,6 @@ class Situation{
         this.y = y;
     }
 }
+
+//01100100101001000111101010000000000001000000000100000101001110101100011010110
+//00001011100000100100101010000111000000101011000001110001001100110010000100001
