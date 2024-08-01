@@ -10,17 +10,17 @@ public class Main {
         int T = sc.nextInt();
 
         int[] shakeNum = new int [N+1];
-        boolean infected = new boolean[N+1];
-        Situation[] situation = new Situation[251];
+        boolean[] infected = new boolean[N+1];
+        Situation[] situation = new Situation[250];
 
         for(int i = 0; i < T; i++){
             int t = sc.nextInt();
             int x = sc.nextInt();
             int y = sc.nextInt();
-            situation[t] = new Situation(t, x, y);
+            situation[i] = new Situation(t, x, y);
         }
 
-        Arrays.sort(situation, 0, t);
+        Arrays.sort(situation, 0, T);
 
         // for(int i = 0; i < 108; i++){
         //     System.out.println(i + "초 : " + situation[i].x + " / " + situation[i].y);
@@ -55,13 +55,13 @@ public class Main {
     }
 }
 
-class Situation{
+class Situation implements Comparable<Situation>{
     int time;
     int x;
     int y;
 
-    public Situation(int x, int y){
-        this.time = thime;
+    public Situation(int time, int x, int y){
+        this.time = time;
         this.x = x;
         this.y = y;
     }
@@ -70,4 +70,4 @@ class Situation{
     public int compareTo(Situation situation){
         return time - situation.time;
     }
-}
+};
