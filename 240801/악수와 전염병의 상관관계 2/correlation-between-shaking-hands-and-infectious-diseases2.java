@@ -23,9 +23,9 @@ public class Main {
             situation[t] = new Situation(x, y);
         }
 
-        for(int i = 0; i < 10; i++){
-            System.out.println(i + "초 : " + situation[i].x + " / " + situation[i].y);
-        }
+        // for(int i = 0; i < 10; i++){
+        //     System.out.println(i + "초 : " + situation[i].x + " / " + situation[i].y);
+        // }
 
         int cnt = 0;
         for(int i = 0; i < 251; i++){
