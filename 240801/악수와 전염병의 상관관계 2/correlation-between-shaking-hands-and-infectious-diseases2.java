@@ -9,68 +9,65 @@ public class Main {
         int P = sc.nextInt();
         int T = sc.nextInt();
 
-        int[] isP = new int [N+1];
+        int[] shakeNum = new int [N+1];
+        boolean infected = new boolean[N+1];
         Situation[] situation = new Situation[251];
-
-        for(int i = 0; i < 251; i++){
-            situation[i] = new Situation();
-        }
 
         for(int i = 0; i < T; i++){
             int t = sc.nextInt();
             int x = sc.nextInt();
             int y = sc.nextInt();
-            situation[t] = new Situation(x, y);
+            situation[t] = new Situation(t, x, y);
         }
+
+        Arrays.sort(situation, 0, t);
 
         // for(int i = 0; i < 108; i++){
         //     System.out.println(i + "초 : " + situation[i].x + " / " + situation[i].y);
         // }
 
-        int cnt = 0;
-        for(int i = 0; i < 251; i++){
-            if(situation[i].x > 0){
-                // 최초 감염자인지 체크
-                // if(situation[i].x == P || situation[i].y ==P){
-                //     isP[situation[i].x] = 1;
-                //     isP[situation[i].y] = 1;
-                // }
-                
-                //앞서서 감염됬는지 체크
-                for(int j = 1; j <= i; j ++){
-                    if(isP[situation[i].x] != 1 || isP[situation[i].y] !=1){
-                        isP[situation[j].x] = 1;
-                        isP[situation[j].y] = 1;
-                    }
-                }
-                cnt++;
+        for(int i = 0; i < T; i++ ){
+            int target1 = situation[i].x;
+            int target2 = situation[i].y;
+
+            if(infected[target1]){
+                shakeNum[target1]++;
             }
-            if(cnt == K){
-                break;
+            if(infected[target2]){
+                shakeNum[target2]++;
+            }
+
+            if(shakeNum[target1] <= K && infected[target1]){
+                infected[target2] = true;
+            }
+            if(shakeNum[target2] <= K && infected[target2]){
+                infected[target1] = true;
             }
         }
 
-        for(int i = 1; i < isP.length ; i++){
-            System.out.print(isP[i]);
+        for(int i = 1; i <= N; i++){
+            if(infected[i]){
+                System.out.print(1);
+            }else{
+                System.out.print(0);
+            }
         }
     }
 }
 
 class Situation{
-    int x = 0;
-    int y = 0;
-
-    public Situation(){
-        this.x = x;
-        this.y = y;
-    }
+    int time;
+    int x;
+    int y;
 
     public Situation(int x, int y){
+        this.time = thime;
         this.x = x;
         this.y = y;
     }
-}
 
-//01100100101001000111101010000000000001000000000100000101001110101100011010110
-//00001011100000100100101010000111000000101011000001110001001100110010000100001
-//00001011100000100100101010000111000000101011000001110001001100110010000100001
+    @Override
+    public int compareTo(Situation situation){
+        return time - situation.time;
+    }
+}
