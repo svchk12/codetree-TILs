@@ -12,7 +12,7 @@ public class Main {
         int[] shakeNum = new int [N+1];
         boolean[] infected = new boolean[N+1];
         Situation[] situation = new Situation[250];
-
+        infected[P] = true;
         for(int i = 0; i < T; i++){
             int t = sc.nextInt();
             int x = sc.nextInt();
