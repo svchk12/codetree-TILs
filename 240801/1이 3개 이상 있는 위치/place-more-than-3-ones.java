@@ -25,8 +25,8 @@ public class Main {
                 int cnt = 0;
 
                 for(int k = 0; k < n; k++){
-                    int nx = x + di[k];
-                    int ny = y + dj[k];
+                    int nx = x + di[k % 4];
+                    int ny = y + dj[k % 4];
                     if(inRange(nx, ny, n) && arr[nx][ny]== 1){
                         cnt++;
                     }
