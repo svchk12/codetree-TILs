@@ -39,9 +39,9 @@ public class Main {
                 
                 //앞서서 감염됬는지 체크
                 for(int j = 0; j <= i; j ++){
-                    if(isP[situation[j].x] == 1 || isP[situation[j].y] ==1){
-                        isP[situation[i].x] = 1;
-                        isP[situation[i].y] = 1;
+                    if(isP[situation[i].x] == 1 || isP[situation[i].y] ==1){
+                        isP[situation[j].x] = 1;
+                        isP[situation[j].y] = 1;
                     }
                 }
                 cnt++;
