@@ -23,20 +23,26 @@ public class Main {
             situation[t] = new Situation(x, y);
         }
 
-        // for(int i = 0; i < 10; i++){
+        // for(int i = 0; i < 108; i++){
         //     System.out.println(i + "초 : " + situation[i].x + " / " + situation[i].y);
         // }
 
         int cnt = 0;
         for(int i = 0; i < 251; i++){
             if(situation[i].x > 0){
+                // 최초 감염자인지 체크
                 if(situation[i].x == P || situation[i].y ==P){
                     isP[situation[i].x] = 1;
                     isP[situation[i].y] = 1;
+                    continue;
                 }
-                if(isP[situation[i].x] == 1 || isP[situation[i].y]== 1){
-                    isP[situation[i].x] = 1;
-                    isP[situation[i].y] = 1;
+                
+                //앞서서 감염됬는지 체크
+                for(int j = 0; j <= i; j ++){
+                    if(isP[situation[j].x] == 1 || isP[situation[j].y] ==1){
+                        isP[situation[i].x] = 1;
+                        isP[situation[i].y] = 1;
+                    }
                 }
                 cnt++;
             }
