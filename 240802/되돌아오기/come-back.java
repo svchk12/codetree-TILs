@@ -26,10 +26,11 @@ public class Main {
                 time++;
                 if(x == 0 && y == 0){
                     System.out.println(time);
-                    break;
+                    return;
                 }
             }
         }
+        System.out.println(-1);
     }
 
     public static int getDirNum(String d){
