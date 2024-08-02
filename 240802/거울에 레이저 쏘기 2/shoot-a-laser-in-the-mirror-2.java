@@ -1,108 +1,100 @@
-import java.util.Scanner;
-import java.util.Arrays;
-import java.util.Collections;
+import java.util.*;
+import java.io.*;
 
 public class Main {
-    public static int n, k;
-    public static int[] dx = new int[]{1, 0,  -1, 0};
-    public static int[] dy = new int[]{0, 1, 0,  -1};
-    public static char[][] arr;
+    static int n, k;
+    static char[][] grid;
+    static int[] dx = {1, 0, -1, 0}; // 하 우 상 좌 (방향)
+    static int[] dy = {0, 1, 0, -1};
+    static class Pair { // 좌표를 담기 위한 객체 자료형
+        int x, y, dir;
 
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        n = sc.nextInt();
-        arr = new char[n][n];
-        for(int i = 0; i < n; i++){
-            String d = sc.next();
-            for(int j = 0; j < n; j++){
-                arr[i][j] = d.charAt(j);
+        Pair(int x, int y, int dir) {
+            this.x = x;
+            this.y = y;
+            this.dir = dir;
+        }
+    }
+    public static void main(String[] args) throws IOException {
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+        n = Integer.parseInt(br.readLine());
+        
+        grid = new char[n][n]; // 격자 초기화
+        for (int i = 0; i < n; i++) {
+            String[] str = br.readLine().split("");
+            for (int j = 0; j < n; j++) {
+                grid[i][j] = str[j].charAt(0);
             }
         }
 
-        k = sc.nextInt();
+        k = Integer.parseInt(br.readLine());
 
-        int x = 0;
-        int y = 0;
-        Point[] point = new Point[4 * n];
+        int x = 0, y = 0;
+        Pair[] arr = new Pair[4 * n]; // 레이저가 들어오는 좌표를 담기 위한 객체 배열
 
-        int dir = 1;
-        int direction = 0;
-        point[0] = new Point(x, y, direction);
+        int dir = 1; // 방향 초기값
+        int direction = 0; // 레이저 초기 좌표값
+        arr[0] = new Pair(x, y, direction);
 
-        for(int i = 1; i < 4; i++){
+        for (int i = 1; i < 4 * n; i++) { // 테두리 좌표 저장
             int nx = x + dx[dir];
             int ny = y + dy[dir];
-
-            if(nx < 0 || ny < 0 || nx >=n || ny >= n){
-                dir = (dir + 3) % 4;
-                direction = (direction + 3) % 4;
-                point[i] = new Point(x, y, direction);
+            if (nx < 0 || ny < 0 || nx >= n || ny >= n) {
+                dir = (dir + 3) % 4; // 테두리를 돌기 위한 방향값
+                direction = (direction + 3) % 4; // 레이저가 들어오는 방향 저장
+                arr[i] = new Pair(x, y, direction);
                 continue;
             }
 
-            point[i] = new Point(nx, ny, direction);
+            arr[i] = new Pair(nx, ny, direction);
             x = nx;
             y = ny;
         }
-        System.out.println(bfs(point[k-1]));
+
+        System.out.println(bfs(arr[k - 1]));
     }
 
-    public static int bfs(Point cur){
+    private static int bfs(Pair cur) {
         int x = cur.x;
         int y = cur.y;
         int dir = cur.dir;
 
         int ans = 0;
-        while(true){
-            int nx = 0;
-            int ny = 0;
+        while (true) {
+            int nx = 0, ny = 0;
 
-            if(arr[x][y] == '/'){
-                if(dir % 2 == 0){
+            if (grid[x][y] == '/') { // 각 상황에 맞는 레이저의 방향 설정
+                if (dir % 2 == 0) {
                     dir = (dir + 3) % 4;
                     nx = x + dx[dir];
                     ny = y + dy[dir];
                     ans++;
-                }else{
+                } else {
                     dir = (dir + 1) % 4;
                     nx = x + dx[dir];
                     ny = y + dy[dir];
                     ans++;
                 }
-            }
-            else{
-                if(dir % 2 == 0){
+            } else {
+                if (dir % 2 == 0) {
                     dir = (dir + 1) % 4;
                     nx = x + dx[dir];
                     ny = y + dy[dir];
                     ans++;
-                }else{
+                } else {
                     dir = (dir + 3) % 4;
                     nx = x + dx[dir];
                     ny = y + dy[dir];
                     ans++;
                 }
             }
-            if(nx < 0 || ny < 0 || nx >= n || ny >= n){
+            if (nx < 0 || ny < 0 || nx >= n || ny >= n) { // 만약 레이저가 격자를 탈출하면 break
                 break;
             }
             x = nx;
             y = ny;
         }
         return ans;
-    }
-}
-
-
-
-class Point{
-    int x;
-    int y;
-    int dir;
-
-    public Point(int x, int y, int dir){
-        this.x = x;
-        this.y = y;
-        this.dir = dir;
     }
 }
