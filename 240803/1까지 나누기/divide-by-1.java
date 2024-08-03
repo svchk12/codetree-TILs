@@ -3,20 +3,15 @@ public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
-        int r = 1;
+        int cnt = 0;
         
         for(int i = 1; i < 100; i++){
-            if(i  == 1){
-                r = n / i;
+            if(n <= 1){
+                System.out.println(cnt);
+                break;
             }
-            else{
-                r = r / i;
-                if(r <= 1){
-                    System.out.println(i);
-                    break;
-                }
-            }
-            
+            n = n / i;
+            cnt++;
         }
     }
 }
