@@ -7,15 +7,13 @@ public class Main {
         int n = sc.nextInt();
         int cnt = 65;
 
-        System.out.print((char)87);
-        System.out.print((char)88);
+        System.out.print((char)90);
 
         for(int i = 1; i <= n; i++){
-            if(cnt >=87 ){
-                cnt = 65;
-            }
-
             for(int j = 1; j <= i; j++){
+                if(cnt >=90 ){
+                    cnt = 65;
+                }
                 System.out.print((char)cnt);
                 cnt++;
             }
