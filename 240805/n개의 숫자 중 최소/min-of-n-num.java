@@ -16,6 +16,8 @@ public class Main {
         for(int i = 0; i < n; i++){
             if(arr[i] < maxVal){
                 maxVal = arr[i];
+            }
+            if(arr[i] == maxVal){
                 cnt++;
             }
         }
