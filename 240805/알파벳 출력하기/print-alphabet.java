@@ -8,12 +8,13 @@ public class Main {
         int cnt = 65;
 
         for(int i = 1; i <= n; i++){
+            if(cnt >=90 ){
+                cnt = 65;
+            }
+
             for(int j = 1; j <= i; j++){
                 System.out.print((char)cnt);
                 cnt++;
-            }
-            if(cnt >=90 ){
-                cnt = 65;
             }
             System.out.println();
         }
