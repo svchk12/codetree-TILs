@@ -7,6 +7,9 @@ public class Main {
         int n = sc.nextInt();
         int cnt = 65;
 
+        System.out.print((char)87);
+        System.out.print((char)88);
+
         for(int i = 1; i <= n; i++){
             if(cnt >=87 ){
                 cnt = 65;
