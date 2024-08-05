@@ -7,8 +7,6 @@ public class Main {
         int n = sc.nextInt();
         int cnt = 65;
 
-        System.out.print((char)90);
-
         for(int i = 1; i <= n; i++){
             for(int j = 1; j <= i; j++){
                 if(cnt >=90 ){
