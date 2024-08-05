@@ -12,6 +12,9 @@ public class Main {
                 System.out.print((char)cnt);
                 cnt++;
             }
+            if(cnt >=90 ){
+                cnt = 65;
+            }
             System.out.println();
         }
     }
