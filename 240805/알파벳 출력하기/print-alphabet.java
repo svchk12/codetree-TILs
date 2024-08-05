@@ -8,7 +8,7 @@ public class Main {
         int cnt = 65;
 
         for(int i = 1; i <= n; i++){
-            if(cnt >=88 ){
+            if(cnt >=87 ){
                 cnt = 65;
             }
 
