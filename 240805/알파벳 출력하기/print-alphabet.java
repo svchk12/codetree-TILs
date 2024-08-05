@@ -9,7 +9,7 @@ public class Main {
 
         for(int i = 1; i <= n; i++){
             for(int j = 1; j <= i; j++){
-                if(cnt >=90 ){
+                if(cnt >90 ){
                     cnt = 65;
                 }
                 System.out.print((char)cnt);
