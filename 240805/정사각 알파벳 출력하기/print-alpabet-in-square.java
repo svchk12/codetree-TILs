@@ -9,7 +9,7 @@ public class Main {
 
         for(int i = 0; i < n; i++){
             for(int j = 0; j < n; j++){
-                System.out.println((char)cnt);
+                System.out.print((char)cnt);
                 cnt++;
             }
             System.out.println();
